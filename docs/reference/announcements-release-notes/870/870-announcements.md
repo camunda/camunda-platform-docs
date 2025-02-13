@@ -1,16 +1,16 @@
 ---
-id: announcements-870
-title: "8.7 Announcements"
+id: 870-announcements
+title: "Announcements"
 description: "Important changes and updates for the Camunda 8.7 release including deprecation & removal notices."
 ---
 
-import DeployDiagramImg from '../img/deploy-diagram-modal.png';
+import DeployDiagramImg from '../../img/deploy-diagram-modal.png';
 
 Important changes and updates for the Camunda 8.7 release are summarized below.
 
-| Scheduled release date | Scheduled end of maintenance | Release notes                                        | Blog                                                                                            |
-| :--------------------- | :--------------------------- | :--------------------------------------------------- | :---------------------------------------------------------------------------------------------- |
-| 8 April 2025           | 13 October 2026              | [8.7 release notes](/reference/release-notes/870.md) | [Announcing Camunda 8.7](https://camunda.com/blog/2024/11/camunda-8-7-releasing-february-2025/) |
+| Scheduled release date | Scheduled end of maintenance | Release notes                                                                        | Blog                                                                                            |
+| :--------------------- | :--------------------------- | :----------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------- |
+| 8 April 2025           | 13 October 2026              | [8.7 release notes](/reference/announcements-release-notes/870/870-release-notes.md) | [Announcing Camunda 8.7](https://camunda.com/blog/2024/11/camunda-8-7-releasing-february-2025/) |
 
 <!--- [Ad-hoc subprocesses](#)
 - [Document handling](#)
@@ -18,13 +18,21 @@ Important changes and updates for the Camunda 8.7 release are summarized below.
   - [Fetch RPA resource API](#)
   - [deployResourceAPI for RPA](#) -->
 
-- [Amazon Web Services (AWS) region support](#amazon-web-services-aws-region-support-saas)
-- [Web Modeler](#web-modeler)
+- [Major product and feature releases](#major-product-and-feature-releases)
+  - [Amazon Web Services (AWS) region support SaaS](#amazon-web-services-aws-region-support-saas)
   - [Deploy diagram change Self-Managed](#web-modeler-deploy-diagram-change)
   - [Milestones renamed to versions](#web-modeler-milestones-renamed-to-versions)
-- [Southeast Asia region for SaaS customers SaaS](#southeast-asia-region-for-saas-customers-saas)
+  - [Southeast Asia region for SaaS customers SaaS](#southeast-asia-region-for-saas-customers-saas)
 
-## Amazon Web Services (AWS) region support <span class="badge badge--long" title="This feature affects SaaS">SaaS</span>
+:::note
+
+There are currently no known versioning changes or deprecations associated with the 8.7 release.
+
+:::
+
+## Major product and feature releases
+
+### Amazon Web Services (AWS) region support <span class="badge badge--long" title="This feature affects SaaS">SaaS</span>
 
 You can choose to host your Camunda 8 SaaS clusters in two new Amazon Web Services (AWS) regions:
 
@@ -33,7 +41,7 @@ You can choose to host your Camunda 8 SaaS clusters in two new Amazon Web Servic
 
 You can select one of these AWS regions when [creating a new cluster](/components/console/manage-clusters/create-cluster.md). You can continue to choose from our Google Cloud Platform (GCP) region options.
 
-To learn more about available Camunda 8 SaaS regions, see [regions](../regions.md).
+To learn more about available Camunda 8 SaaS regions, see [regions](../../regions.md).
 
 :::note
 
@@ -44,17 +52,15 @@ The following limitations currently apply for AWS regions:
 
 :::
 
-## Web Modeler
-
 ### Deploy diagram change <span class="badge badge--long" title="This feature affects Self-Managed">Self-Managed</span> {#web-modeler-deploy-diagram-change}
 
-With this version, we ship a breaking change to how Web Modeler **Deploy diagram** modals work. Clusters must now be proactively [configured](/docs/self-managed/modeler/web-modeler/configuration/configuration.md#clusters) to be able to deploy from Web Modeler.
+With this version, we ship a breaking change to how Web Modeler **Deploy diagram** modals work. Clusters must now be proactively [configured](/self-managed/modeler/web-modeler/configuration/configuration.md#clusters) to be able to deploy from Web Modeler.
 
 <img src={DeployDiagramImg} alt="New 8.7 deploy diagram modal" width="600px" style={{border: '0', paddingTop: '0', marginTop: '0'}} />
 
 - In 8.6, you could still configure cluster details on the **Deploy diagram** modal when deploying.
-- In 8.7, you can no longer configure cluster details on the **Deploy diagram** modal. You must [configure the cluster](/docs/self-managed/modeler/web-modeler/configuration/configuration.md#clusters) to be able to deploy from this modal.
-- Note that you must also be assigned the `Zeebe` [Identity role](/docs/self-managed/identity/user-guide/roles/add-assign-role.md) to be able to deploy.
+- In 8.7, you can no longer configure cluster details on the **Deploy diagram** modal. You must [configure the cluster](/self-managed/modeler/web-modeler/configuration/configuration.md#clusters) to be able to deploy from this modal.
+- Note that you must also be assigned the `Zeebe` [Identity role](/self-managed/identity/user-guide/roles/add-assign-role.md) to be able to deploy.
 
 ### Milestones renamed to versions {#web-modeler-milestones-renamed-to-versions}
 
@@ -67,6 +73,6 @@ Further details can be found in [Web Modeler's OpenAPI documentation](https://mo
 This is a nominal update and the functionality of versions and milestones is equivalent.
 :::
 
-## Southeast Asia region for SaaS customers <span class="badge badge--long" title="This feature affects SaaS">SaaS</span>
+### Southeast Asia region for SaaS customers <span class="badge badge--long" title="This feature affects SaaS">SaaS</span>
 
 SaaS customers can now create orchestration clusters in the [Singapore (asia-southeast1) region](/reference/regions.md), ensuring lower latency and improved processing speed for organizations operating in southeast Asian countries.
